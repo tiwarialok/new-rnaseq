@@ -98,7 +98,8 @@ process fastqc {
 
     output:
     file("fastqc_${sample_id}_logs") into fastqc_ch
-
+    file("fastqc_${sample_id}_logs/*_fastqc.zip")
+    file("fastqc_${sample_id}_logs/*_fastqc.html")
 
     script:
     """

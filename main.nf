@@ -90,7 +90,7 @@ process quant {
 }
 
 process fastqc {
-    tag "FASTQC on $sample_id"
+    tag "FASTQC on $sample_id", mode:'copy'
     publishDir params.outdir
 
     input:

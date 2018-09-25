@@ -91,7 +91,7 @@ process quant {
 
 process fastqc {
     tag "FASTQC on $sample_id"
-    publishDir "${params.outdir}/", mode:'copy'
+    //publishDir "${params.outdir}/", mode:'copy'
 
     input:
     set sample_id, file(reads) from read_pairs2_ch

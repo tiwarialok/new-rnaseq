@@ -98,10 +98,10 @@ process fastqc {
 
     output:
     file("fastqc_${sample_id}_logs") into fastqc_ch
-    file("fastqc_${sample_id}_logs/{pair_id}_1_fastqc.zip")
-    file("fastqc_${sample_id}_logs/{pair_id}_1_fastqc.html")
-    file("fastqc_${sample_id}_logs/{pair_id}_2_fastqc.zip")
-    file("fastqc_${sample_id}_logs/{pair_id}_2_fastqc.html")
+    file("fastqc_${sample_id}_logs/{sample_id}_1_fastqc.zip")
+    file("fastqc_${sample_id}_logs/{sample_id}_1_fastqc.html")
+    file("fastqc_${sample_id}_logs/{sample_id}_2_fastqc.zip")
+    file("fastqc_${sample_id}_logs/{sample_id}_2_fastqc.html")
 
     script:
     """

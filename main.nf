@@ -90,10 +90,10 @@ process quant {
 }
 
 process fastqc {
-    tg "FASTQC on $sample_id"
+    tag "FASTQC on $sample_id"
     publishDir "${params.outdir}/", mode:'copy'
 
-    inut:
+    input:
     set sample_id, file(reads) from read_pairs2_ch
 
     output:
